@@ -118,31 +118,31 @@ const Header = () => {
       <div className="desktop-links hidden md:flex gap-6 items-center">
         <Link
           to="/"
-          className="text-sm uppercase hover:text-[#01B8F1] font-semibold transition-colors"
+          className="text-base uppercase hover:text-[#01B8F1] font-semibold transition-colors"
         >
           Home
         </Link>
         <Link
           to="/about"
-          className="text-sm uppercase hover:text-[#01B8F1] font-semibold transition-colors"
+          className="text-base uppercase hover:text-[#01B8F1] font-semibold transition-colors"
         >
           About us
         </Link>
         <Link
           to="/projects"
-          className="text-sm uppercase hover:text-[#01B8F1] font-semibold transition-colors"
+          className="text-base uppercase hover:text-[#01B8F1] font-semibold transition-colors"
         >
           Service
         </Link>
         <Link
           to="/projects"
-          className="text-sm uppercase hover:text-[#01B8F1] font-semibold transition-colors"
+          className="text-base uppercase hover:text-[#01B8F1] font-semibold transition-colors"
         >
           Solutions
         </Link>
         <Link
           to="/contact"
-          className="text-sm uppercase hover:bg-[#01B8F1] hover:text-white font-semibold transition-colors border border-[#01B8F1] px-4 py-2 rounded-full"
+          className="text-base uppercase hover:bg-[#01B8F1] hover:text-white font-semibold transition-colors border border-[#01B8F1] px-4 py-2 rounded-full"
         >
           Contact us
         </Link>
