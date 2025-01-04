@@ -3,7 +3,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <div className="w-full min-h-screen">
-      <section className="w-full min-h-screen px-8 lg:px-12 flex items-center bg-[url('./public/images/background.png')] bg-cover bg-bottom text-white">
+      <section className="w-full min-h-screen px-8 lg:px-12 flex items-center bg-[url('/images/background.png')] bg-cover bg-bottom text-white">
         <article className="w-full lg:w-1/2 pt-10">
           <h1 className="text-[2.8rem] leading-tight md:text-7xl md:leading-tight font-semibold">
             Empowering Businesses{" "}
@@ -20,7 +20,8 @@ const HomePage = () => {
           </p>
         </article>
       </section>
-      <div className="w-full h-fit md:h-32 bg-[url('./images/cardbg.png')] bg-cover bg-center flex justify-evenly items-center flex-wrap">
+      <div className="w-full h-fit md:h-32 bg-[url('/images/cardbg.png')] bg-cover bg-center flex justify-evenly items-center flex-wrap">
+
         <div className="card flex mt-12 flex-col justify-between items-center p-2 w-44 md:w-60 h-28 md:h-36 text-white bg-[#1E1E1E] rounded-lg">
           <div className="flex w-full items-center gap-4 border-b border-b-gray-500 p-3">
             <img
