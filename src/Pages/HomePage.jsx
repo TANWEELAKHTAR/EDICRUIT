@@ -3,7 +3,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <div className="w-full min-h-screen">
-      <section className="w-full min-h-screen px-8 lg:px-12 flex items-center bg-[url('./images/background.png')] bg-cover bg-bottom text-white">
+      <section className="w-full min-h-screen px-8 lg:px-12 flex items-center bg-home-bg bg-cover bg-bottom text-white">
         <article className="w-full lg:w-1/2 pt-10">
           <h1 className="text-[2.8rem] leading-tight md:text-7xl md:leading-tight font-semibold">
             Empowering Businesses{" "}
