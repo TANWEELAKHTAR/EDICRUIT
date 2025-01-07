@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Header from "./components/Header";
@@ -13,7 +12,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </BrowserRouter>
   );
