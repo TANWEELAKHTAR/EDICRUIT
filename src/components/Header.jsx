@@ -129,16 +129,10 @@ const Header = () => {
           About us
         </Link>
         <Link
-          to="/projects"
+          to="/service"
           className="text-base uppercase hover:text-[#01B8F1] font-semibold transition-colors"
         >
           Service
-        </Link>
-        <Link
-          to="/projects"
-          className="text-base uppercase hover:text-[#01B8F1] font-semibold transition-colors"
-        >
-          Solutions
         </Link>
         <Link
           to="/contact"
@@ -161,19 +155,12 @@ const Header = () => {
         </Link>
         <Link
           onClick={handleClosing}
-          to="/projects"
+          to="/service"
           className="text-xl uppercase"
         >
           Service
         </Link>
         
-        <Link
-          onClick={handleClosing}
-          to="/contact"
-          className="text-xl uppercase "
-        >
-          Solutions
-        </Link>
         <Link
           onClick={handleClosing}
           to="/contact"

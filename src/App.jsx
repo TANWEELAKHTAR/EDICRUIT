@@ -3,6 +3,8 @@ import HomePage from "./Pages/HomePage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactPage from "./Pages/ContactPage";
+import ServicePage from "./Pages/ServicePage";
+import AboutusPage from "./Pages/AboutusPage";
 const App = () => {
   return (
     <BrowserRouter>
@@ -10,6 +12,8 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutusPage/>} />
+          <Route path="/service" element={<ServicePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
