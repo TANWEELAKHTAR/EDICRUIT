@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const HomeCta = () => {
   return (
-    <div className='w-full h-fit mx-auto pb-10 md:px-12 relative text-white'>
+    <div className='w-full h-fit mx-auto pb-10 md:px-12 relative text-white px-2'>
         <img className='w-full h-52 rounded-lg object-fit' src="/images/cta.png" alt="" />
         <div className="w-full md:max-w-lg p-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-4">
         <h1 className='text-base md:text-xl text-center'>Supercharge your business with Expert IT and HR solution</h1>

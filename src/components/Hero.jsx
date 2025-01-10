@@ -38,8 +38,8 @@ const Hero = () => {
       );
   }, []);
   return (
-    <div className='w-full h-fit md:h-screen bg-[url("/images/background.png")] bg-cover bg-center text-white px-6 sm:px-8 lg:px-12 flex items-center'>
-      <article className="w-full md:max-w-4xl flex gap-4 lg:gap-6 flex-col py-8 md:py-12 pt-28">
+    <div className='w-full min-h-full lg:min-h-screen bg-[url("/images/background.png")] bg-cover bg-center text-white px-6 sm:px-8 lg:px-12 flex items-center'>
+      <article className="w-full md:max-w-4xl flex gap-4 lg:gap-6 flex-col py-28">
         <div className="flex flex-col gap-2 sm:gap-4">
           <h1 id="h1" className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold leading-tight">
             Empowering
