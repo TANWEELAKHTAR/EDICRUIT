@@ -2,8 +2,8 @@ import React from "react";
 
 const ContactPage = () => {
   return (
-    <section className="w-full min-h-fit bg-[#121211] text-white">
-      <div className="w-full h-fit md:h-screen flex flex-col md:flex-row">
+    <section className="w-full min-h-fit">
+      <div className="w-full h-fit md:h-screen flex flex-col md:flex-row ">
         <div className="w-full lg:w-1/2 h-full flex items-center justify-center flex-col gap-8 px-8 mt-28 lg:m-0">
           <h1 className="text-5xl md:text-6xl lg:text-7xl capitalize font-semibold">
             contact us
@@ -73,7 +73,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  h-fit lg:h-screen flex flex-col md:flex-row">
+      <div className="w-full  h-fit lg:h-screen flex flex-col md:flex-row bg-[#000] text-white">
         <div className="max-w-md mx-auto lg:w-1/2  h-fit md:h-screen  flex items-center justify-center p-8">
         <img className="w-full h-full md:h-fit object-cover" src="./images/map.png" alt="" />
         </div>

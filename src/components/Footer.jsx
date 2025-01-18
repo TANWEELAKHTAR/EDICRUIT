@@ -3,8 +3,8 @@ import 'remixicon/fonts/remixicon.css'
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-800 to-black text-gray-300 p-6 md:p-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+    <footer className="bg-black text-gray-300 p-6 md:p-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 items-center bg-white rounded-2xl text-black p-4">
         <div className="flex flex-col items-start space-y-4">
           <img
             src="./images/logo.png"

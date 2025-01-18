@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const Hero = () => {
+const HomeHero = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -70,4 +70,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeHero;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const HomeCta = () => {
+const Cta = () => {
   return (
     <div className='w-full h-fit mx-auto pb-10 md:px-12 relative text-white px-2'>
         <img className='w-full h-52 rounded-lg object-fit' src="/images/cta.png" alt="" />
@@ -13,4 +13,4 @@ const HomeCta = () => {
   )
 }
 
-export default HomeCta
+export default Cta
