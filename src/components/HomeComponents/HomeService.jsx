@@ -16,7 +16,7 @@ const HomeService = () => {
     },
     {
       title:
-        "Enhance Your Operational Efficiency with IBM AS 400 modernization",
+        "Unlock Growth Potential with Expert IBM i(AS400) Solutions",
       description:
         "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
       list: [
@@ -24,10 +24,10 @@ const HomeService = () => {
         "Optimize resource utilization",
         "Automate repetitive tasks",
       ],
-      image: "/images/it support.png",
+      image: "/images/service.png",
     },
     {
-      title: "Enhance Your Operational Efficiency with  400 modernization",
+      title: "Unlock Growth Potential with IBM i(AS400) Modernization",
       description:
         "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
       list: [
@@ -35,10 +35,10 @@ const HomeService = () => {
         "Optimize resource utilization",
         "Automate repetitive tasks",
       ],
-      image: "/images/it support.png",
+      image: "/images/modernization.png",
     },
     {
-      title: "Enhance Your Operational Efficiency with IBM AS 400 ",
+      title: "Unlock Growth Potential with Our HR Solutions",
       description:
         "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
       list: [
@@ -46,7 +46,7 @@ const HomeService = () => {
         "Optimize resource utilization",
         "Automate repetitive tasks",
       ],
-      image: "/images/it support.png",
+      image: "/images/hrsolution.png",
     },
   ];
 
@@ -116,7 +116,7 @@ const HomeService = () => {
             <img
               src={currentService.image}
               alt="service"
-              className="w-fit object-cover"
+              className="w-fit h-64 object-cover rounded-lg"
             />
           </div>
         </div>

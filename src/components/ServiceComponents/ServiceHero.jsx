@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServiceHero = () => {
   return (
-    <div className='w-full min-h-full lg:min-h-screen bg-[url("/images/servicebg.png")] bg-cover bg-center text-white px-6 sm:px-8 lg:px-12 flex items-center'>
+    <div className='w-full min-h-screen bg-[url("/images/servicebg.png")] bg-cover bg-center text-white px-6 sm:px-8 lg:px-12 flex items-center'>
       <article className="w-full md:max-w-4xl flex gap-4 lg:gap-6 flex-col py-28">
           <h1 id="h1" className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold leading-tight">
             Our Services

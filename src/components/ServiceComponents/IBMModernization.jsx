@@ -2,7 +2,8 @@ import React from "react";
 
 const IBMModernization = () => {
   return (
-    <div className="container mx-auto p-6 md:px-12 bg-gray-100">
+    <div className="container mx-auto p-6 md:px-12">
+      <div className="bg-zinc-100 p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Modernization Main Card */}
         <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">
@@ -72,6 +73,7 @@ const IBMModernization = () => {
             Get in touch
           </button>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -11,3 +11,8 @@
     font-family: Poppins;
 }
 
+.gradient{
+    background: linear-gradient(90deg, #0047FF 0%, #01B8F1 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

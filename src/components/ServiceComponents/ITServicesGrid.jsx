@@ -2,7 +2,8 @@ import React from "react";
 
 const ITServicesGrid = () => {
   return (
-    <div className="container mx-auto p-6 md:px-12 bg-gray-100">
+    <div className="container mx-auto p-6 md:px-12">
+      <div className="bg-zinc-100 p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">
           <h2 className="text-cyan-300 text-4xl font-bold mb-4">
@@ -108,6 +109,7 @@ const ITServicesGrid = () => {
             Get in touch
           </button>
         </div>
+      </div>
       </div>
     </div>
   );
