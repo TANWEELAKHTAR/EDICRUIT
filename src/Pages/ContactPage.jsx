@@ -5,10 +5,10 @@ const ContactPage = () => {
     <section className="w-full min-h-fit">
       <div className="w-full h-fit md:h-screen flex flex-col md:flex-row">
         <div className="w-full lg:w-1/2 h-full flex items-center justify-center flex-col gap-8 px-8 mt-28 lg:mt-0">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl capitalize font-semibold text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl capitalize font-semibold text-center">
             contact us
           </h1>
-          <p className="text-sm md:text-base md:w-5/6 text-center">
+          <p className="text-sm md:text-base lg:text-lg md:w-5/6 text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
             nisi. Eum, similique incidunt saepe ad ipsum atque reiciendis
             consequuntur nobis dolor eaque sint! Mollitia eos accusantium vitae
@@ -73,21 +73,18 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h- md:h-screen flex items-center flex-col p-8 bg-black text-white relative">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl capitalize font-semibold text-center mt-12">
-            our location
-          </h1>
-          <p className="text-sm md:text-base md:w-3/6 text-center mt-4 mb-32">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-            nisi. Eum, similique incidunt saepe ad ipsum atque reiciendis
-            consequuntur nobis dolor eaque sint! Mollitia eos accusantium vitae
-            corporis consequuntur beatae.
-            consequuntur nobis dolor eaque sint! Mollitia eos accusantium vitae
-            corporis consequuntur beatae.
-          </p>
-          <img className="w-full absolute -z-0 bottom-0 object-fill" src="./images/earth.svg" alt="Map" />
-
-        </div>
+      <div className="w-full h-fit md:h-screen flex items-center flex-col p-8 bg-black text-white relative">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl capitalize font-semibold text-center mt-12">
+          our location
+        </h1>
+        <p className="text-sm md:text-base lg:text-lg md:w-3/6 text-center mt-4 mb-32">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          nisi. Eum, similique incidunt saepe ad ipsum atque reiciendis
+          consequuntur nobis dolor eaque sint! Mollitia eos accusantium vitae
+          corporis consequuntur beatae.
+        </p>
+        <img className="w-full absolute -z-0 bottom-0 object-fill" src="./images/earth.svg" alt="Map" />
+      </div>
     </section>
   );
 };

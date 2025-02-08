@@ -42,14 +42,13 @@ const HomeCard = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 md:p-10">
         {advantages.map((advantage, index) => (
-          <div key={index} className={`{relative bg-white rounded-lg shadow-md relative overflow-hidden ${index === 4 ? 'md:col-span-2' : ''}`}>
-           < img src={advantage.image} alt={advantage.image} className="w-full h-80 object-cover" />
-           <div className="p-6 bg-black bg-opacity-50 text-white h-fit absolute bottom-0 left-0">
+          <div key={index} className={`relative bg-white rounded-lg shadow-md overflow-hidden ${index === 4 ? 'md:col-span-2' : ''}`}>
+            <img src={advantage.image} alt={advantage.title} className="w-full h-64 md:h-80 object-cover" />
+            <div className="p-6 bg-black bg-opacity-50 text-white h-fit absolute bottom-0 left-0 w-full">
               <h3 className="text-xl font-bold mb-2">{advantage.title}</h3>
               <p className="text-sm">{advantage.description}</p>
             </div>
           </div>
-          
         ))}
       </div>
     </section>
