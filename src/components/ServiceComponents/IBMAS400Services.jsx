@@ -18,7 +18,6 @@ const IBMAS400Services = () => {
             </p>
           </div>
 
-          {/* Unlock IBM Power Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               Unlock IBM (AS400) Power with Our Expert Support & Services
@@ -30,9 +29,7 @@ const IBMAS400Services = () => {
           </div>
         </div>
 
-        {/* Bottom Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {/* End to End Infrastructure Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               IBM (AS400) END TO END infrastructure support
@@ -44,7 +41,6 @@ const IBMAS400Services = () => {
             </p>
           </div>
 
-          {/* Customized Support Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               IBM(AS400) Customized Support
@@ -56,7 +52,6 @@ const IBMAS400Services = () => {
             </p>
           </div>
 
-          {/* Contact Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover flex flex-col items-center justify-center">
             <div className="grid grid-cols-2 gap-4 mb-6">
               <img
@@ -80,9 +75,9 @@ const IBMAS400Services = () => {
                 alt="Service Image 4"
               />
             </div>
-            <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
+            <a href="/contact" className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
               Get in touch
-            </button>
+            </a>
           </div>
         </div>
       </div>

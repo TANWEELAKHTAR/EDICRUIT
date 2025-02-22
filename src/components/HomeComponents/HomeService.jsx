@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const HomeService = () => {
+  const scrolldown = () => {
+    window.scrollTo({
+      top: window.innerHeight * 2 - 100,
+      behavior: "smooth",
+    });
+  };
+
   const serviceData = [
     {
       title: "Unlock Growth Potential with Strategic IT service",
@@ -15,8 +22,7 @@ const HomeService = () => {
       image: "/images/it support.png",
     },
     {
-      title:
-        "Unlock Growth Potential with Expert IBM i(AS400) Solutions",
+      title: "Unlock Growth Potential with Expert IBM i(AS400) Solutions",
       description:
         "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
       list: [
@@ -121,18 +127,18 @@ const HomeService = () => {
           </div>
         </div>
         <div className="w-full md:max-w-6xl mx-auto flex items-center justify-center gap-4">
-          <Link
-            to="/contact"
-            className="px-6 py-3 text-xs md:text-sm font-semibold rounded-full border border-[#00B8F1]"
+          <button
+            onClick={scrolldown}
+            className="px-6 py-3 text-xs md:text-sm font-semibold rounded-full border border-[#00B8F1] hover:bg-[#00B8F1] transition-colors duration-300 hover:text-white"
           >
             Learn more
-          </Link>
-          <Link
-            to="/contact"
-            className="px-6 py-3 text-xs md:text-sm font-semibold rounded-full bg-[#00B8F1] text-white"
+          </button>
+          <a
+            href="/contact"
+            className="px-6 py-3 text-xs md:text-sm font-semibold border rounded-full bg-[#00B8F1] text-white hover:bg-white hover:border-[#00B8F1] hover:text-[#00B8F1] transition-colors duration-300 hover:text-black"
           >
             Get-in-touch
-          </Link>
+          </a>
         </div>
       </div>
     </div>

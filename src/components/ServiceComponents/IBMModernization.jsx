@@ -5,7 +5,6 @@ const IBMModernization = () => {
     <div className="container mx-auto p-6 md:px-12">
       <div className="bg-zinc-100 p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Modernization Main Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">
             <h2 className="text-cyan-300 text-3xl md:text-4xl font-bold mb-4">
               IBM (AS400) Modernization
@@ -19,7 +18,6 @@ const IBMModernization = () => {
             </p>
           </div>
 
-          {/* Tape Digitization Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               IBM i(AS400) Tape Digitization
@@ -33,9 +31,7 @@ const IBMModernization = () => {
           </div>
         </div>
 
-        {/* Bottom Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          {/* Infrastructure Modernization Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               IBM i(AS400) Infrastructure Modernization
@@ -49,7 +45,6 @@ const IBMModernization = () => {
             </p>
           </div>
 
-          {/* Contact Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover flex flex-col items-center justify-center">
             <div className="grid grid-cols-2 gap-4 mb-6">
               <img
@@ -73,9 +68,9 @@ const IBMModernization = () => {
                 alt="Service Image 4"
               />
             </div>
-            <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
+            <a href="/contact" className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
               Get in touch
-            </button>
+            </a>
           </div>
         </div>
       </div>
