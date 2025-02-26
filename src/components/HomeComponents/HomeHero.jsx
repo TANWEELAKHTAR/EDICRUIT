@@ -57,7 +57,7 @@ const HomeHero = () => {
         </p>
         <p id="p" className="max-w-3xl text-base sm:text-lg md:text-xl lg:text-2xl">
           Edicruit offers tailored strategies to drive business growth, enhance
-          operational efficiency, and achieve measurable success. Our expert
+          operational efficiency, and achieve measurable success. Our managed, customized support & services and expert
           consultants provide guidance every step of the way, ensuring your
           business thrives.
         </p>

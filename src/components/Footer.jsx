@@ -16,7 +16,7 @@ const Footer = () => {
           <h4 className="font-semibold text-lg mb-3">Address</h4>
           <p>White Field</p>
           <p>Bangalore-560067</p>
-          <p>Email: info@gmail.com</p>
+          <p>Email: info@edicruit.com</p>
         </div>
         <div>
           <h4 className="font-semibold text-lg mb-3">Services</h4>
@@ -58,8 +58,8 @@ const Footer = () => {
           >
             Request a Call
           </a>
-          <p className="mt-4">+1 (2222) 999-99-99</p>
-          <p>Thinkshell@Lorem ipsum.com</p>
+          <p className="mt-4">+91 99399 10263</p>
+          <p>info@edicruit.com</p>
         </div>
       </div>
     </footer>
