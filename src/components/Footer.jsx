@@ -1,5 +1,5 @@
 import React from "react";
-import 'remixicon/fonts/remixicon.css'
+import "remixicon/fonts/remixicon.css";
 
 const Footer = () => {
   return (
@@ -53,11 +53,12 @@ const Footer = () => {
         </div>
         <div className="col-span-1 md:col-span-2 lg:col-span-4 text-center md:text-right mt-6 md:mt-0">
           <a
-            href="#"
+            href="tel:+919939910263"
             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
           >
             Request a Call
           </a>
+
           <p className="mt-4">+91 99399 10263</p>
           <p>info@edicruit.com</p>
         </div>

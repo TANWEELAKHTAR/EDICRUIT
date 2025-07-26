@@ -6,11 +6,11 @@ const IBMAS400Services = () => {
       <div className="bg-zinc-100 p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
-            <h2 className="text-cyan-300 text-3xl md:text-4xl font-bold mb-4">
-              IBM (AS400) SUPPORT AND SERVICES
+            <h2 className="text-[#00B8F1] text-3xl md:text-2xl font-bold mb-4">
+              IBM i(AS400) SUPPORT AND SERVICES
             </h2>
-            <p className="text-gray-100 text-base md:text-lg">
-              Our IBM (AS400) Support and Services provide 24x7 remote monitoring,
+            <p className="text-gray-100 text-sm">
+              Our IBM i(AS400) Support and Services provide 24x7 remote monitoring,
               cost optimization, seamless transitions, and expert administration.
               We ensure optimal performance and reliability with cloud-based
               backups and swift disaster recovery. Partner with us for efficient
@@ -19,10 +19,10 @@ const IBMAS400Services = () => {
           </div>
 
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
-            <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
-              Unlock IBM (AS400) Power with Our Expert Support & Services
+            <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
+              Unlock IBM i(AS400) Power with Our Expert Support & Services
             </h2>
-            <p className="text-gray-100 text-base md:text-lg">
+            <p className="text-gray-100 text-sm">
               Welcome to EDICRUIT, your go-to for IBM AS400/iSeries support and
               solutions. Let's optimize your technology together!
             </p>
@@ -31,10 +31,10 @@ const IBMAS400Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">
-            <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
-              IBM (AS400) END TO END infrastructure support
+            <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
+              IBM i(AS400) END TO END infrastructure support
             </h2>
-            <p className="text-gray-100 text-base md:text-lg">
+            <p className="text-gray-100 text-sm">
               We continuously monitor your critical applications, servers, and
               network. Any alerts are promptly reported and escalated to prevent
               business impact, ensuring issues are resolved without delay.
@@ -42,11 +42,11 @@ const IBMAS400Services = () => {
           </div>
 
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
-            <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
-              IBM(AS400) Customized Support
+            <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
+              IBM i(AS400) Customized Support
             </h2>
-            <p className="text-gray-100 text-base md:text-lg">
-              Our tailored IBM i (AS400) support services align with your business
+            <p className="text-gray-100 text-sm">
+              Our tailored IBM i(AS400) support services align with your business
               goals, operational challenges, and industry standards. Enjoy
               flexible, hourly-based services to meet your specific needs.
             </p>

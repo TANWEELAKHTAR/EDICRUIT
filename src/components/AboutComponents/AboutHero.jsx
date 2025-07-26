@@ -11,9 +11,9 @@ const AboutHero = () => {
           </h1>
           <div className="max-w-3xl mx-auto relative bg-gradient-to-tr from-blue-600 to-blue-400 shadow-lg rounded-lg p-6 md:p-8 mt-8">
             <p className="mt-4 text-white text-base md:text-lg">
-              Reliable IBM i (AS400) Managed Services - Anytime, Anywhere
+              Reliable IBM i(AS400) Managed Services - Anytime, Anywhere
               At EDICRUIT, we specialize in delivering 24x7 remote monitoring
-              and management of your IBM i (AS400) environment, ensuring
+              and management of your IBM i(AS400) environment, ensuring
               uninterrupted uptime and seamless operations.
             </p>
             <div className="absolute top-[90%] md:top-[75%] right-0">

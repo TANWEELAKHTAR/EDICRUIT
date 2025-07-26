@@ -8,10 +8,10 @@ const ITServicesGrid = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {/* First Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover h-full">
-            <h2 className="text-cyan-300 text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-[#00B8F1] text-2xl md:text-3xl font-bold mb-4">
               IT Support & Services
             </h2>
-            <p className="text-gray-100 text-sm md:text-base lg:text-lg">
+            <p className="text-gray-100 text-sm">
               Elevate your tech with our Managed IT Services. Enjoy 24/7
               support, advanced cybersecurity, scalable cloud solutions,
               efficient network management, and reliable backup and recovery.
@@ -22,20 +22,20 @@ const ITServicesGrid = () => {
           {/* Middle Column */}
           <div className="flex flex-col gap-4 md:gap-6 h-full">
             <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover h-full">
-              <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
                 Application Support
               </h2>
-              <p className="text-gray-100 text-sm md:text-base lg:text-lg">
+              <p className="text-gray-100 text-sm">
                 Monitoring Cloud infrastructure, storage and application.
                 Ensuring data backup and recovery solutions are in place
               </p>
             </div>
 
             <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover h-full">
-              <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
                 Cloud Services
               </h2>
-              <p className="text-gray-100 text-sm md:text-base lg:text-lg">
+              <p className="text-gray-100 text-sm">
                 Monitoring Cloud infrastructure, storage and application.
                 Ensuring data backup and recovery solutions are in place
               </p>
@@ -44,10 +44,10 @@ const ITServicesGrid = () => {
 
           {/* Third Card */}
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover h-full">
-            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               24/7 monitoring
             </h2>
-            <p className="text-gray-100 text-sm md:text-base lg:text-lg">
+            <p className="text-gray-100 text-sm">
               We continuously monitor your critical applications, servers, and
               network. Any alerts are promptly reported and escalated to prevent
               business impact, ensuring issues are resolved without delay.
@@ -58,10 +58,10 @@ const ITServicesGrid = () => {
         {/* Lower Section */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 mt-6">
           <div className="lg:col-span-3 bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
-            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               Desktop support services
             </h2>
-            <p className="text-gray-100 text-sm md:text-base lg:text-lg mb-4">
+            <p className="text-gray-100 text-sm mb-4">
               Our desktop support services ensure your employees work
               efficiently. We provide:
             </p>
@@ -77,7 +77,7 @@ const ITServicesGrid = () => {
                 "Installation and configuration",
                 "Reporting and analysis",
               ].map((service, index) => (
-                <div key={index} className="text-gray-100 text-sm md:text-base">
+                <div key={index} className="text-gray-100 text-xs">
                   {service}
                 </div>
               ))}

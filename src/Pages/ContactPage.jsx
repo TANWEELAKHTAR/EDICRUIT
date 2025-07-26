@@ -8,14 +8,14 @@ const ContactPage = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl capitalize font-semibold text-center">
             contact us
           </h1>
-          <p className="text-sm md:text-base lg:text-lg md:w-5/6 ">
+          <p className="text-sm md:text-base md:w-5/6 ">
             Thank you for visiting Edicruit! We are here to assist you with all
             your IBM i(AS400) support & services, IT helpdesk services, technology
             needs and HR services. Whether you have questions, need assistance, or want to learn
             more about how our services can support your business, we're just a
             click away.
           </p>
-          <p className="text-sm md:text-base lg:text-lg md:w-5/6 ">
+          <p className="text-sm md:text-base md:w-5/6 ">
             Our dedicated team is ready to provide you with expert solutions and
             prompt support. Please feel free to reach out to us.
           </p>

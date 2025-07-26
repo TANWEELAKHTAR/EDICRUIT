@@ -17,11 +17,11 @@ const HRSolutionBanner = () => {
         </div>
 
         <div className="flex-grow bg-black rounded-lg p-8 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
-          <h2 className="text-cyan-300 text-2xl md:text-4xl font-bold mb-6">
+          <h2 className="text-[#00B8F1] text-2xl md:text-3xl font-bold mb-6">
             Strategic HR Solution
           </h2>
-          <p className="text-gray-100 text-base md:text-lg leading-relaxed">
-            EDICRUIT, your strategic HR partner, delivers innovative staffing solutions and fosters 
+          <p className="text-gray-100 text-sm leading-relaxed">
+            <span className="text-[#00B8F1]">Edicruit</span>, your strategic HR partner, delivers innovative staffing solutions and fosters 
             empowering business partnerships. Our comprehensive services include executive search, 
             middle management hiring, project-based hiring, and recruitment process outsourcing—all 
             tailored to meet your HR needs with excellence.
