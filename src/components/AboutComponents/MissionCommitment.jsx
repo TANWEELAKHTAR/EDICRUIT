@@ -10,7 +10,7 @@ const MissionCommitment = () => {
             <div className="flex items-start space-x-4">
               <h3 className="text-lg font-bold text-gray-800 w-1/3">Empowering Seamless IT Operations:</h3>
               <p className="text-gray-700 text-base w-2/3">
-                We strive to provide uninterrupted and reliable IBM i(AS400) managed
+                We strive to provide uninterrupted and reliable managed
                 services that ensure operational excellence, empowering businesses to
                 focus on their core objectives.
               </p>
@@ -34,7 +34,7 @@ const MissionCommitment = () => {
               <h3 className="text-lg font-bold text-gray-800 w-1/3">Driving Technological Excellence:</h3>
               <p className="text-gray-700 text-base w-2/3">
                 Our goal is to leverage innovation and expertise to help businesses
-                achieve peak performance and reliability for their IBM i(AS400)
+                achieve peak performance and reliability for their
                 environments.
               </p>
             </div>
@@ -47,8 +47,8 @@ const MissionCommitment = () => {
             <div className="flex items-start space-x-4">
               <h3 className="text-lg font-bold text-gray-800 w-1/3">24x7 Dedicated Support:</h3>
               <p className="text-gray-700 text-base w-2/3">
-                We are committed to providing round-the-clock monitoring and
-                administration, ensuring your IBM i(AS400) environment remains
+                We are committed to providing round-the-clock IT support including IBM i(AS400)
+                administration, ensuring your environment remains
                 operational without interruptions.
               </p>
             </div>
@@ -63,7 +63,7 @@ const MissionCommitment = () => {
               <h3 className="text-lg font-bold text-gray-800 w-1/3">Tailored Expertise:</h3>
               <p className="text-gray-700 text-base w-2/3">
                 We pledge to offer expert-driven solutions, tailored to meet your unique
-                business challenges with dedicated IBM i(AS400) specialists.
+                business challenges with dedicated specialists.
               </p>
             </div>
           </div>
