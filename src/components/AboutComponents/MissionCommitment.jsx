@@ -47,8 +47,7 @@ const MissionCommitment = () => {
             <div className="flex items-start space-x-4">
               <h3 className="text-lg font-bold text-gray-800 w-1/3">24x7 Dedicated Support:</h3>
               <p className="text-gray-700 text-base w-2/3">
-                We are committed to providing round-the-clock IT support including IBM i(AS400)
-                administration, ensuring your environment remains
+                We are committed to providing round-the-clock Monitoring and IT support including IBM i(AS400) Operations & Administrations, ensuring your environment remains
                 operational without interruptions.
               </p>
             </div>

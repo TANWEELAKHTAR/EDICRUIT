@@ -15,20 +15,23 @@ const HomeService = () => {
       description:
         "We provide top - noch IT Services, driving business growth and delivering large - Scale projects across industries and regions.",
       list: [
-        "Easy and fast deployment",
-        "Built-in Intelligence that automates several tasks",
-        "Cost-effective and scalable CRM Platform",
+        "Easy and fast deployment.",
+        "Built-in Intelligence that automates several tasks.",
+        "Cost-effective and scalable CRM Platform.",
+        "Available 24x7/365 support & services accross Globe.",
       ],
       image: "/images/it support.png",
     },
     {
-      title: "Unlock Growth Potential with Expert IBM i(AS400) Solutions",
+      title: "Leverage our Potential with Expert IBM i(AS400) Solutions",
       description:
-        "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
+        "Specialized in providing top-class support & services, and managed solutions that cater to the unique requirements of your business.",
       list: [
-        "Modernize your IT infrastructure",
-        "Optimize resource utilization",
-        "Automate repetitive tasks",
+        "Modernize your IT infrastructure by migrating to cloud.",
+        "one-stop solution for all your IBM i(AS400)/iSeries needs.",
+        "IBM i(AS400) End-to-End Infrastructure Support.",
+        "Customize IBM i(AS400) Support & Services requirements.",
+        "Opt for hourly based services.",
       ],
       image: "/images/service.png",
     },
@@ -37,20 +40,24 @@ const HomeService = () => {
       description:
         "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
       list: [
-        "Modernize your IT infrastructure",
-        "Optimize resource utilization",
-        "Automate repetitive tasks",
+        "Modernize your IT infrastructure.",
+        "Transform your On-Prem servers to all major Cloud providers.",
+        "Advanced solutions to replace traditional backup methods.",
+        "Digitalze your existing legacy Tape Backups.",
+        "Optimize resource utilization.",
+        "Automate repetitive tasks.",
       ],
       image: "/images/modernization.png",
     },
     {
-      title: "Unlock Growth Potential with Our HR Solutions",
+      title: "Strategic HR Partner",
       description:
-        "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
+        "Our comprehensive suite of HR services includes Executive Search & Selection, Middle Management Hiring, Project  your one-stop solution for all your HR needs, delivered with a commitment to excellence.",
       list: [
-        "Modernize your IT infrastructure",
-        "Optimize resource utilization",
-        "Automate repetitive tasks",
+        "IT Recruitment & Staffing.",
+        "HR Consulting for IT Companies.",
+        "Workforce Planning & Management.",
+        "Payroll & Employee Benefits Management.",
       ],
       image: "/images/hrsolution.png",
     },
@@ -60,18 +67,18 @@ const HomeService = () => {
   const [currentService, setCurrentService] = useState(serviceData[0]);
 
   // Auto-rotate tabs every 1.5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % serviceData.length;
-        setCurrentService(serviceData[nextIndex]);
-        return nextIndex;
-      });
-    }, 5500);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentServiceIndex((prevIndex) => {
+  //       const nextIndex = (prevIndex + 1) % serviceData.length;
+  //       setCurrentService(serviceData[nextIndex]);
+  //       return nextIndex;
+  //     });
+  //   }, 5500);
 
-    // Cleanup interval on component unmount
-    return () => clearInterval(interval);
-  }, [serviceData]);
+  //   // Cleanup interval on component unmount
+  //   return () => clearInterval(interval);
+  // }, [serviceData]);
 
   const handleServiceChange = (index) => {
     setCurrentServiceIndex(index);
@@ -89,7 +96,7 @@ const HomeService = () => {
         <div className="w-full flex items-center justify-start md:justify-evenly h-full border-b-2 border-slate-900 overflow-x-auto gap-2 md:gap-4 pb-0">
           <button
             onClick={itSupportHandler}
-            className={`flex-shrink-0 px-2 py-2 md:px-4 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
+            className={`flex-shrink-0 px-2 py-2 md:px-10 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
               currentServiceIndex === 0
                 ? "bg-[#00B8F1] text-white"
                 : "text-slate-900 hover:bg-gray-100"
@@ -99,17 +106,17 @@ const HomeService = () => {
           </button>
           <button
             onClick={ibmSupportHandler}
-            className={`flex-shrink-0 px-2 py-2 md:px-4 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
+            className={`flex-shrink-0 px-2 py-2 md:px-10 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
               currentServiceIndex === 1
                 ? "bg-[#00B8F1] text-white"
                 : "text-slate-900 hover:bg-gray-100"
             }`}
           >
-            IBM AS 400 Support
+            IBM i(AS400) Support & Services
           </button>
           <button
             onClick={modernizationHandler}
-            className={`flex-shrink-0 px-2 py-2 md:px-4 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
+            className={`flex-shrink-0 px-2 py-2 md:px-10 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
               currentServiceIndex === 2
                 ? "bg-[#00B8F1] text-white"
                 : "text-slate-900 hover:bg-gray-100"
@@ -119,7 +126,7 @@ const HomeService = () => {
           </button>
           <button
             onClick={hrSolutionhandler}
-            className={`flex-shrink-0 px-2 py-2 md:px-4 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
+            className={`flex-shrink-0 px-2 py-2 md:px-10 md:py-3 text-xs md:text-base font-medium rounded-t-xl whitespace-nowrap ${
               currentServiceIndex === 3
                 ? "bg-[#00B8F1] text-white"
                 : "text-slate-900 hover:bg-gray-100"

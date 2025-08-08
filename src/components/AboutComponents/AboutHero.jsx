@@ -9,12 +9,12 @@ const AboutHero = () => {
             We're here to <br />
             <span className="gradient">guarantee your success</span>
           </h1>
-          <div className="max-w-3xl mx-auto relative bg-gradient-to-tr from-blue-600 to-blue-400 shadow-lg rounded-lg p-6 md:p-8 mt-8">
+          <div className="max-w-4xl mx-auto relative bg-gradient-to-tr from-blue-600 to-blue-400 shadow-lg rounded-lg p-6 md:p-8 mt-8">
             <p className="mt-4 text-white text-sm md:text-base">
-              Reliable IBM i(AS400) Managed Services - Anytime, Anywhere At
-              EDICRUIT, we specialize in delivering 24x7 remote monitoring and
+              Reliable Managed Services - Anytime, Anywhere At
+              EDICRUIT, we specialize in delivering 24x7 remote monitoring, IT/ITES Support & Services, Help Desk and end-to-end
               management of your IBM i(AS400) environment, ensuring
-              uninterrupted uptime and seamless operations. Our HR services
+              uninterrupted uptime and seamless operations. <br />HR services - Our HR services
               encompass a wide range of functions designed to support the
               management and developmet of an organization's workforce.
             </p>
