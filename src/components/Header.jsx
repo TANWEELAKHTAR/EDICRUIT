@@ -88,9 +88,9 @@ const Header = () => {
     });
   };
   return (
-    <nav className="w-full flex items-center justify-between p-4 lg:px-6 md:p-3 bg-[#1E1E1E80]  text-white fixed top-0 z-40">
+    <nav className="w-full flex items-center justify-between lg:px-6 md:px-3 bg-[#1E1E1E80]  text-white fixed top-0 z-40">
       <img
-        className="w-36 md:w-44 object-cover"
+        className="w-36 object-cover"
         src="./images/logo.svg"
         alt=""
       />
