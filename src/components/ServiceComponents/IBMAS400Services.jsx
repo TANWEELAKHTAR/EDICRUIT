@@ -10,17 +10,18 @@ const IBMAS400Services = () => {
               IBM i(AS400) SUPPORT AND SERVICES
             </h2>
             <p className="text-gray-100 text-sm">
-              Our IBM i(AS400) Support and Services provide 24x7 remote monitoring,
-              cost optimization, seamless transitions, and expert administration.
-              We ensure optimal performance and reliability with cloud-based
-              backups and swift disaster recovery. Partner with us for efficient
-              IBM i(AS400) management.
+              Our IBM i(AS400) Support and Services provide 24x7 remote
+              monitoring, cost optimization, seamless transitions, and expert
+              administration. We ensure optimal performance and reliability with
+              cloud-based backups and swift disaster recovery. Partner with us
+              for efficient IBM i(AS400) management.
             </p>
           </div>
 
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
-              Unlock IBM i(AS400) Power with Our Expert Support & Services
+              Empower Your IBM i(AS400) System with Professional Support &
+              Tailored Services
             </h2>
             <p className="text-gray-100 text-sm">
               Welcome to EDICRUIT, your go-to for IBM AS400/iSeries support and
@@ -35,9 +36,12 @@ const IBMAS400Services = () => {
               IBM i(AS400) END TO END infrastructure support
             </h2>
             <p className="text-gray-100 text-sm">
-              We continuously monitor your critical applications, servers, and
-              network. Any alerts are promptly reported and escalated to prevent
-              business impact, ensuring issues are resolved without delay.
+              Our dedicated team offers complete infrastructure management, from
+              system monitoring, opretations, Administration, updates, upgrades
+              and migrations. Around-the-Clock Support Service Your business
+              never sleeps, and neither do we. Our dedicated team is available
+              24x7x365 to provide unwavering support, ensuring that your
+              Critical Business Applications are always up and running.
             </p>
           </div>
 
@@ -46,9 +50,12 @@ const IBMAS400Services = () => {
               IBM i(AS400) Customized Support
             </h2>
             <p className="text-gray-100 text-sm">
-              Our tailored IBM i(AS400) support services align with your business
-              goals, operational challenges, and industry standards. Enjoy
-              flexible, hourly-based services to meet your specific needs.
+              Every business has unique needs. We provide customized support
+              services tailored to your specific IBM i(AS400) infrastructure
+              requirements, ensuring that your systems align with your business
+              goals, operational challenges, and industry standards. Our
+              Customised support model also provide hourly based services as per
+              your business need.
             </p>
           </div>
 
@@ -75,7 +82,10 @@ const IBMAS400Services = () => {
                 alt="Service Image 4"
               />
             </div>
-            <a href="/contact" className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
+            <a
+              href="/contact"
+              className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors"
+            >
               Get in touch
             </a>
           </div>
