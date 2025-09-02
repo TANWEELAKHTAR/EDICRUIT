@@ -1,10 +1,9 @@
-import React from "react";
 import "remixicon/fonts/remixicon.css";
 
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-300 p-6 md:p-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-start bg-white rounded-2xl text-black p-4">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start bg-white rounded-2xl text-black p-4">
         <div className="flex flex-col items-start space-y-4">
           <img
             src="./images/logo.svg"
@@ -20,11 +19,12 @@ const Footer = () => {
         </div>
         <div>
           <h4 className="font-semibold text-lg mb-3">Services</h4>
-          <ul className="space-y-1">
-            <li>IT/ITES Support & Service</li>
-            <li>IBM i (AS400) Support & Service</li>
-            <li>HR Solution</li>
-          </ul>
+          <div className="space-y-1">
+            <a href="service#s1" className="cursor-pointer block hover:text-[#00B8F1]">IT Support & Services</a>
+            <a href="service#s2" className="cursor-pointer block hover:text-[#00B8F1]">IBM i(AS400) SUPPORT AND SERVICES</a>
+            <a href="service#s3" className="cursor-pointer block hover:text-[#00B8F1]">IBM i(AS400) Infrastructure Modernization</a>
+            <a href="service#s4" className="cursor-pointer block hover:text-[#00B8F1]">Strategic HR Solution</a>
+          </div>
         </div>
         <div>
           <h4 className="font-semibold text-lg mb-3">Information</h4>
@@ -58,7 +58,6 @@ const Footer = () => {
           >
             Request a Call
           </a>
-
           <p className="mt-4">+91 99399 10263</p>
           <p>info@edicruit.com</p>
         </div>

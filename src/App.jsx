@@ -5,9 +5,11 @@ import Footer from "./components/Footer";
 import ContactPage from "./Pages/ContactPage";
 import ServicePage from "./Pages/ServicePage";
 import AboutusPage from "./Pages/AboutusPage";
+import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <main className="w-full min-h-screen relative">
         <Header />
         <Routes>

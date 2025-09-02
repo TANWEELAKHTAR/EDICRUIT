@@ -9,38 +9,38 @@ const HomeHero = () => {
       behavior: "smooth",
     });
   };
-  // useGSAP(() => {
-  //   const tl = gsap.timeline();
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-  //   tl.from("#h1", {
-  //     y: 100,
-  //     opacity: 0,
-  //     duration: 1,
-  //     stagger: 0.3,
-  //     ease: "power4.out",
-  //   })
-  //     .from(
-  //       "#p",
-  //       {
-  //         y: 50,
-  //         opacity: 0,
-  //         duration: 0.8,
-  //         stagger: 0.2,
-  //         ease: "power3.out",
-  //       },
-  //       "-=0.5"
-  //     )
-  //     .from(
-  //       "#button",
-  //       {
-  //         scale: 0,
-  //         opacity: 0,
-  //         duration: 0.6,
-  //         stagger: 0.2,
-  //       },
-  //       "-=0.4"
-  //     );
-  // }, []);
+    tl.from("#h1", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+      ease: "power4.out",
+    })
+      .from(
+        "#p",
+        {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+        },
+        "-=0.5"
+      )
+      .from(
+        "#button",
+        {
+          scale: 0,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.2,
+        },
+        "-=0.4"
+      );
+  }, []);
   return (
     <div className='w-full bg-[url("/images/background.jpg")] bg-cover bg-center text-white px-6 md:px-8 lg:px-12'>
       <article className="w-full md:max-w-4xl flex gap-6 flex-col py-40">

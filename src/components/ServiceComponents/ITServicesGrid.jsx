@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ITServicesGrid = () => {
   return (
-    <div className="container mx-auto p-6 md:px-8 lg:px-12">
+    <div className="container mx-auto p-6 md:px-8 lg:px-12" id="s1">
       <div className="bg-zinc-100 p-4 md:p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {/* First Card */}

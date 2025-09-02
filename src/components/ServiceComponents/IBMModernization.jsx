@@ -2,7 +2,7 @@ import React from "react";
 
 const IBMModernization = () => {
   return (
-    <div className="container mx-auto p-6 md:px-12">
+    <div className="container mx-auto p-6 md:px-12" id="s3">
       <div className="bg-zinc-100 p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">

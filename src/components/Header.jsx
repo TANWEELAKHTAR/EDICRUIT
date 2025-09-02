@@ -88,12 +88,12 @@ const Header = () => {
     });
   };
   return (
-    <nav className="w-full flex items-center justify-between lg:px-6 md:px-3 bg-[#1E1E1E80]  text-white fixed top-0 z-40">
-      <img
+    <nav className="w-full flex items-center justify-between pr-3 lg:px-6 md:px-3 bg-[#1E1E1E80]  text-white fixed top-0 z-40">
+      <Link to={"/"}><img
         className="w-36 object-cover"
         src="./images/logo.svg"
         alt=""
-      />
+      /></Link>
       <button
         className="md:hidden flex flex-col justify-center items-center gap-1.5 z-50"
         onClick={handleMenuToggle}
