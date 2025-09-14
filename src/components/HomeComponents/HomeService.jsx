@@ -11,32 +11,34 @@ const HomeService = () => {
 
   const serviceData = [
     {
-      title: "Unlock Growth Potential with Strategic IT service",
+      title: "Transform Your Business with Growth-Oriented IT & ITES Solutions",
       description:
         "We provide top - noch IT Services, driving business growth and delivering large - Scale projects across industries and regions.",
       list: [
-        "Easy and fast deployment.",
-        "Built-in Intelligence that automates several tasks.",
-        "Cost-effective and scalable CRM Platform.",
-        "Available 24x7/365 support & services accross Globe.",
+        "Remote IT Support & Help Desk.",
+        "Server Management.",
+        "Strategic IT Planning & Consulting.",
+        "Business Process Outsourcing.",
+        "Supply Chain Management Support",
+        "Customer Support Services (Voice and Non-Voice)",
       ],
       image: "/images/it support.png",
     },
     {
-      title: "Leverage our Potential with Expert IBM i(AS400) Solutions",
+      title: "Leverage our Potential with Expert IBM i Solutions",
       description:
         "Specialized in providing top-class support & services, and managed solutions that cater to the unique requirements of your business.",
       list: [
         "Modernize your IT infrastructure by migrating to cloud.",
         "one-stop solution for all your IBM i(AS400)/iSeries needs.",
-        "IBM i(AS400) End-to-End Infrastructure Support.",
-        "Customize IBM i(AS400) Support & Services requirements.",
+        "IBM i End-to-End Infrastructure Support.",
+        "Customize IBM i Support & Services requirements.",
         "Opt for hourly based services.",
       ],
       image: "/images/service.png",
     },
     {
-      title: "Unlock Growth Potential with IBM i(AS400) Modernization",
+      title: "Unlock Growth Potential with IBM i Modernization",
       description:
         "We help businesses transform their IT infrastructure to deliver faster, more efficient, and cost-effective solutions.",
       list: [
@@ -66,19 +68,18 @@ const HomeService = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentService, setCurrentService] = useState(serviceData[0]);
 
-  // Auto-rotate tabs every 1.5 seconds
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentServiceIndex((prevIndex) => {
-  //       const nextIndex = (prevIndex + 1) % serviceData.length;
-  //       setCurrentService(serviceData[nextIndex]);
-  //       return nextIndex;
-  //     });
-  //   }, 5500);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % serviceData.length;
+        setCurrentService(serviceData[nextIndex]);
+        return nextIndex;
+      });
+    }, 5500);
 
-  //   // Cleanup interval on component unmount
-  //   return () => clearInterval(interval);
-  // }, [serviceData]);
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, [serviceData]);
 
   const handleServiceChange = (index) => {
     setCurrentServiceIndex(index);
@@ -102,7 +103,7 @@ const HomeService = () => {
                 : "text-slate-900 hover:bg-gray-100"
             }`}
           >
-            IT Support
+            IT & ITES Support
           </button>
           <button
             onClick={ibmSupportHandler}
@@ -112,7 +113,7 @@ const HomeService = () => {
                 : "text-slate-900 hover:bg-gray-100"
             }`}
           >
-            IBM i(AS400) Support & Services
+            IBM i Support & Services
           </button>
           <button
             onClick={modernizationHandler}

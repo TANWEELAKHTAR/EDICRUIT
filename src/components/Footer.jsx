@@ -21,8 +21,8 @@ const Footer = () => {
           <h4 className="font-semibold text-lg mb-3">Services</h4>
           <div className="space-y-1">
             <a href="service#s1" className="cursor-pointer block hover:text-[#00B8F1]">IT Support & Services</a>
-            <a href="service#s2" className="cursor-pointer block hover:text-[#00B8F1]">IBM i(AS400) SUPPORT AND SERVICES</a>
-            <a href="service#s3" className="cursor-pointer block hover:text-[#00B8F1]">IBM i(AS400) Infrastructure Modernization</a>
+            <a href="service#s2" className="cursor-pointer block hover:text-[#00B8F1]">IBM i Support & Services</a>
+            <a href="service#s3" className="cursor-pointer block hover:text-[#00B8F1]">IBM i Infrastructure Modernization</a>
             <a href="service#s4" className="cursor-pointer block hover:text-[#00B8F1]">Strategic HR Solution</a>
           </div>
         </div>
@@ -30,22 +30,22 @@ const Footer = () => {
           <h4 className="font-semibold text-lg mb-3">Information</h4>
           <ul className="space-y-1">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/" className="hover:underline">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/about" className="hover:underline">
                 About us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Service
+              <a href="/service" className="hover:underline">
+                Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/contact" className="hover:underline">
                 Contact us
               </a>
             </li>

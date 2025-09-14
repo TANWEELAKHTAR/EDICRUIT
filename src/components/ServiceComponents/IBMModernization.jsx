@@ -7,7 +7,7 @@ const IBMModernization = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">
             <h2 className="text-[#00B8F1] text-3xl md:text-3xl font-bold mb-4">
-              IBM i(AS400) Infrastructure Modernization
+              IBM i Infrastructure Modernization
             </h2>
             <p className="text-gray-100 text-sm">
               We specialize in transforming your on-prem servers to all the
@@ -20,7 +20,7 @@ const IBMModernization = () => {
 
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
-              IBM i(AS400) Tape Digitization
+              IBM i Tape Digitization
             </h2>
             <p className="text-gray-100 text-sm">
               Say goodbye to legacy tape systems with our tape digitization
@@ -34,7 +34,7 @@ const IBMModernization = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
-              IBM i(AS400) Backup Modernization.
+              IBM i Backup Modernization.
             </h2>
             <p className="text-gray-100 text-sm">
               Ensure the safety and reliability of your data with our backup

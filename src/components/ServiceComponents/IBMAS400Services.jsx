@@ -7,7 +7,7 @@ const IBMAS400Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-[#00B8F1] text-3xl md:text-2xl font-bold mb-4">
-              IBM i(AS400) SUPPORT AND SERVICES
+              IBM i SUPPORT AND SERVICES
             </h2>
             <p className="text-gray-100 text-sm">
               Our IBM i(AS400) Support and Services provide 24x7 remote
@@ -20,12 +20,12 @@ const IBMAS400Services = () => {
 
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
-              Empower Your IBM i(AS400) System with Professional Support &
-              Tailored Services
+              Empower Your IBM i System with Professional Support &
+              Personalized Services
             </h2>
             <p className="text-gray-100 text-sm">
               Welcome to EDICRUIT, your go-to for IBM AS400/iSeries support and
-              solutions. Let's optimize your technology together!
+              solutions. We provide comprehensive AS400 solutions, and 24/7 monitoring. Our experts ensure seamless operations, minimize downtime, and enhance system efficiency. Let's optimize your technology together!
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ const IBMAS400Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/circbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
-              IBM i(AS400) END TO END infrastructure support
+              IBM i END TO END infrastructure support
             </h2>
             <p className="text-gray-100 text-sm">
               Our dedicated team offers complete infrastructure management, from
@@ -47,11 +47,11 @@ const IBMAS400Services = () => {
 
           <div className="bg-black text-white rounded-lg p-6 bg-[url('/images/sqrbg.png')] bg-center bg-cover">
             <h2 className="text-white text-2xl md:text-2xl font-bold mb-4">
-              IBM i(AS400) Customized Support
+              IBM i Customized Support
             </h2>
-            <p className="text-gray-100 text-sm">
-              Every business has unique needs. We provide customized support
-              services tailored to your specific IBM i(AS400) infrastructure
+            <p className="text-gray-100 text-base">
+              Every business has unique needs. We provide customized
+              services developed to your specific IBM i(AS400) infrastructure
               requirements, ensuring that your systems align with your business
               goals, operational challenges, and industry standards. Our
               Customised support model also provide hourly based services as per

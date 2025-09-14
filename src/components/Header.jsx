@@ -132,7 +132,7 @@ const Header = () => {
           to="/service"
           className="text-base uppercase hover:text-[#01B8F1] font-semibold transition-colors"
         >
-          Service
+          Services
         </Link>
         <Link
           to="/contact"
@@ -158,7 +158,7 @@ const Header = () => {
           to="/service"
           className="text-xl uppercase"
         >
-          Service
+          Services
         </Link>
         
         <Link

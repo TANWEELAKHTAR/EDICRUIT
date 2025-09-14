@@ -11,7 +11,7 @@ const ITServicesGrid = () => {
             <h2 className="text-[#00B8F1] text-2xl md:text-3xl font-bold mb-4">
               IT Support & Services
             </h2>
-            <p className="text-gray-100 text-sm">
+            <p className="text-gray-100 text-base">
               Elevate your tech with our Managed IT Services. Enjoy 24/7
               support, advanced cybersecurity, scalable cloud solutions,
               efficient network management, and reliable backup and recovery.
@@ -26,8 +26,7 @@ const ITServicesGrid = () => {
                 Application Support
               </h2>
               <p className="text-gray-100 text-sm">
-                Monitoring Cloud infrastructure, storage and application.
-                Ensuring data backup and recovery solutions are in place
+                We offer reliable application support services to ensure optimal performance, stability, and user satisfaction. With twenty-four seven support and proactive management, we help minimize downtime, enhance functionality, and ensure your applications run efficiently to support business operations.
               </p>
             </div>
 
@@ -36,8 +35,7 @@ const ITServicesGrid = () => {
                 Cloud Services
               </h2>
               <p className="text-gray-100 text-sm">
-                Monitoring Cloud infrastructure, storage and application.
-                Ensuring data backup and recovery solutions are in place
+                Our cloud services provide scalable, secure, and cost-effective solutions designed to meet your business needs. We offer cloud migration, infrastructure management, data backup, disaster recovery, and ongoing support. Whether public, private, or hybrid cloud, our experts ensure seamless integration, high availability, and optimized performance to drive digital transformation and growth.
               </p>
             </div>
           </div>
@@ -47,7 +45,7 @@ const ITServicesGrid = () => {
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
               24/7 monitoring
             </h2>
-            <p className="text-gray-100 text-sm">
+            <p className="text-gray-100 text-base">
               We continuously monitor your critical applications, servers, and
               network. Any alerts are promptly reported and escalated to prevent
               business impact, ensuring issues are resolved without delay.

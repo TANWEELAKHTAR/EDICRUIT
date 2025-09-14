@@ -1,6 +1,28 @@
 import React from "react";
 
 const ContactPage = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "71b79093-487b-45d3-9d5b-1bab55823b52");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
   return (
     <section className="w-full min-h-fit">
       <div className="w-full h-fit md:h-screen flex flex-col md:flex-row">
@@ -10,10 +32,10 @@ const ContactPage = () => {
           </h1>
           <p className="text-sm md:text-base md:w-5/6 ">
             Thank you for visiting Edicruit! We are here to assist you with all
-            your IBM i(AS400) support & services, IT helpdesk services, technology
-            needs and HR services. Whether you have questions, need assistance, or want to learn
-            more about how our services can support your business, we're just a
-            click away.
+            your IT & ITES Support & Services, Managing IBM i infrastructure,
+            technology needs and HR services. Whether you have questions, need
+            assistance, or want to learn more about how our services can support
+            your business, we're just a click away.
           </p>
           <p className="text-sm md:text-base md:w-5/6 ">
             Our dedicated team is ready to provide you with expert solutions and
@@ -28,7 +50,7 @@ const ContactPage = () => {
             <p className="text-gray-600 mb-6 text-center">
               You can reach us anytime
             </p>
-            <form>
+            <form onSubmit={onSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <input
                   type="text"
@@ -87,7 +109,9 @@ const ContactPage = () => {
           our remote services offering
         </h1>
         <p className="text-sm md:text-base lg:text-lg md:w-3/6 text-center mt-4 mb-32">
-        We are proud to offer comprehensive remote support and services to clients across all regions. No matter where you are located, our team of experts is always just a call or click away.
+          We are proud to offer comprehensive remote support and services to
+          clients across all regions. No matter where you are located, our team
+          of experts is always just a call or click away.
         </p>
         <img
           className="w-full absolute -z-0 bottom-0 object-fill"
