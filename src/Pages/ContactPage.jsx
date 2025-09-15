@@ -1,28 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ContactPage = () => {
-  const onSubmit = async (event) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    phone: "",
+    countryCode: "+1"
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const countryCodes = [
+    { code: "+1", country: "US/CA", flag: "🇺🇸" },
+    { code: "+91", country: "IN", flag: "🇮🇳" },
+    { code: "+44", country: "UK", flag: "🇬🇧" },
+    { code: "+49", country: "DE", flag: "🇩🇪" },
+    { code: "+33", country: "FR", flag: "🇫🇷" },
+    { code: "+86", country: "CN", flag: "🇨🇳" },
+    { code: "+81", country: "JP", flag: "🇯🇵" },
+    { code: "+82", country: "KR", flag: "🇰🇷" },
+    { code: "+61", country: "AU", flag: "🇦🇺" },
+    { code: "+55", country: "BR", flag: "🇧🇷" },
+    { code: "+7", country: "RU", flag: "🇷🇺" },
+    { code: "+34", country: "ES", flag: "🇪🇸" },
+    { code: "+39", country: "IT", flag: "🇮🇹" },
+    { code: "+31", country: "NL", flag: "🇳🇱" },
+    { code: "+46", country: "SE", flag: "🇸🇪" },
+    { code: "+47", country: "NO", flag: "🇳🇴" },
+    { code: "+45", country: "DK", flag: "🇩🇰" },
+    { code: "+41", country: "CH", flag: "🇨🇭" },
+    { code: "+43", country: "AT", flag: "🇦🇹" },
+    { code: "+32", country: "BE", flag: "🇧🇪" }
+  ];
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    setIsSubmitting(true);
 
-    formData.append("access_key", "71b79093-487b-45d3-9d5b-1bab55823b52");
+    const formDataObj = new FormData();
+    
+    // Add your Web3Forms access key here
+    formDataObj.append("access_key", "71b79093-487b-45d3-9d5b-1bab55823b52");
+    
+    // Add form data
+    formDataObj.append("name", formData.name);
+    formDataObj.append("email", formData.email);
+    formDataObj.append("subject", formData.subject);
+    formDataObj.append("message", formData.message);
+    formDataObj.append("phone", `${formData.countryCode} ${formData.phone}`);
 
-    const object = Object.fromEntries(formData);
+    const object = Object.fromEntries(formDataObj);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
 
-    if (res.success) {
-      console.log("Success", res);
+      if (res.success) {
+        console.log("Success", res);
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+          phone: "",
+          countryCode: "+1"
+        });
+        alert("Message sent successfully!");
+        window.location.href = "/";
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
+
   return (
     <section className="w-full min-h-fit">
       <div className="w-full h-fit md:h-screen flex flex-col md:flex-row">
@@ -43,64 +108,126 @@ const ContactPage = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2 h-full flex items-center justify-center p-8 mt-16 lg:mt-10">
-          <div className="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4 text-black text-center">
-              Get in Touch
+          <div className="contact-form w-full lg:w-[60%] p-8 rounded-xl backdrop-blur shadow-lg">
+            <h2 className="text-2xl font-bold mb-6 text-center tracking-wide uppercase form-element">
+              Get-in-touch
             </h2>
-            <p className="text-gray-600 mb-6 text-center">
-              You can reach us anytime
-            </p>
-            <form onSubmit={onSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div className="space-y-4">
+              <div className="form-element">
+                <label className="block text-sm font-medium mb-1 ">Name</label>
                 <input
                   type="text"
-                  placeholder="First Name"
-                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  name="name"
+                  required
+                  className="w-full px-4 py-2 rounded-lg bg-white shadow-lg border border-white/10 focus:outline-none focus:border-white/30"
+                  placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                 />
               </div>
-              <div className="mb-4">
+              <div className="form-element">
+                <label className="block text-sm font-medium mb-1 ">
+                  Email
+                </label>
                 <input
                   type="email"
-                  placeholder="Your email"
-                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  name="email"
+                  required
+                  className="w-full px-4 py-2 rounded-lg bg-white shadow-lg border border-white/10 focus:outline-none focus:border-white/30"
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                 />
               </div>
-              <div className="mb-4">
+              <div className="form-element">
+                <label className="block text-sm font-medium mb-1 ">
+                  Phone Number
+                </label>
+                <div className="flex bg-white shadow-lg rounded-lg overflow-hidden">
+                  <select
+                    value={formData.countryCode}
+                    onChange={(e) =>
+                      setFormData({ ...formData, countryCode: e.target.value })
+                    }
+                    className="px-3 py-2 bg-white border border-white/10 focus:outline-none focus:border-white/30 "
+                  >
+                    {countryCodes.map((country) => (
+                      <option 
+                        key={country.code} 
+                        value={country.code}
+                        className="bg-black text-white text-sm"
+                      >
+                        {country.flag} {country.code} {country.country}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    className="w-full px-4 py-2 bg-white  border border-white/10 focus:outline-none focus:border-white/30"
+                    placeholder="Phone number"
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+              <div className="form-element">
+                <label className="block text-sm font-medium mb-1 ">
+                  Subject
+                </label>
                 <input
                   type="text"
-                  placeholder="Phone number"
-                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  name="subject"
+                  required
+                  className="w-full px-4 py-2 rounded-lg bg-white shadow-lg border border-white/10 focus:outline-none focus:border-white/30"
+                  placeholder="Subject..."
+                  value={formData.subject}
+                  onChange={(e) =>
+                    setFormData({ ...formData, subject: e.target.value })
+                  }
                 />
               </div>
-              <div className="mb-6">
+              <div className="form-element">
+                <label className="block text-sm font-medium mb-1 ">
+                  Message
+                </label>
                 <textarea
-                  placeholder="Message"
-                  rows="4"
-                  className="w-full border resize-none border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  name="message"
+                  rows="1"
+                  required
+                  className="w-full px-4 py-2 rounded-lg bg-white shadow-lg border border-white/10 focus:outline-none focus:border-white/30 resize-none"
+                  placeholder="Write your message..."
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600 transition-colors"
+                disabled={isSubmitting}
+                onClick={handleSubmit}
+                className="form-element w-full py-2 px-4 bg-blue-600 text-white rounded-lg font-medium opacity-90 transition-opacity disabled:opacity-50 "
               >
-                Submit
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
-              <p className="text-gray-500 text-sm mt-4 text-center">
-                By contacting us, you agree to our{" "}
-                <span className="hover:underline text-black">
-                  Terms of services
-                </span>{" "}
-                and {""}
-                <span className="hover:underline text-black">
-                  privacy policy
-                </span>
-              </p>
-            </form>
+            </div>
+            <p className=" text-sm mt-4 text-center">
+              By contacting us, you agree to our{" "}
+              <span className="underline  cursor-pointer">
+                Terms of services
+              </span>{" "}
+              and{" "}
+              <span className="underline  cursor-pointer">
+                privacy policy
+              </span>
+            </p>
           </div>
         </div>
       </div>

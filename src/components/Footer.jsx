@@ -15,15 +15,42 @@ const Footer = () => {
           <h4 className="font-semibold text-lg mb-3">Address</h4>
           <p>White Field</p>
           <p>Bangalore-560067</p>
-          <p>Email: info@edicruit.com</p>
+          <p>Email: 
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@edicruit.com"
+              className="underline"
+            >
+               info@edicruit.com
+            </a>
+          </p>
         </div>
         <div>
           <h4 className="font-semibold text-lg mb-3">Services</h4>
           <div className="space-y-1">
-            <a href="service#s1" className="cursor-pointer block hover:text-[#00B8F1]">IT Support & Services</a>
-            <a href="service#s2" className="cursor-pointer block hover:text-[#00B8F1]">IBM i Support & Services</a>
-            <a href="service#s3" className="cursor-pointer block hover:text-[#00B8F1]">IBM i Infrastructure Modernization</a>
-            <a href="service#s4" className="cursor-pointer block hover:text-[#00B8F1]">Strategic HR Solution</a>
+            <a
+              href="service#s1"
+              className="cursor-pointer block hover:text-[#00B8F1]"
+            >
+              IT Support & Services
+            </a>
+            <a
+              href="service#s2"
+              className="cursor-pointer block hover:text-[#00B8F1]"
+            >
+              IBM i Support & Services
+            </a>
+            <a
+              href="service#s3"
+              className="cursor-pointer block hover:text-[#00B8F1]"
+            >
+              IBM i Infrastructure Modernization
+            </a>
+            <a
+              href="service#s4"
+              className="cursor-pointer block hover:text-[#00B8F1]"
+            >
+              Strategic HR Solution
+            </a>
           </div>
         </div>
         <div>
@@ -59,7 +86,14 @@ const Footer = () => {
             Request a Call
           </a>
           <p className="mt-4">+91 99399 10263</p>
-          <p>info@edicruit.com</p>
+          <p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@edicruit.com"
+              className="underline"
+            >
+              info@edicruit.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>
