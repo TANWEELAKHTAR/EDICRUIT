@@ -161,12 +161,11 @@ const HomeService = () => {
           >
             Learn more
           </button>
-          <a
-            href="/contact"
+          <Link to="/contact"
             className="px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-semibold border rounded-full bg-[#00B8F1] text-white hover:bg-white hover:border-[#00B8F1] hover:text-[#00B8F1] transition-colors duration-300"
           >
             Get-in-touch
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "remixicon/fonts/remixicon.css";
 
 const Footer = () => {
@@ -27,54 +28,54 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-lg mb-3">Services</h4>
           <div className="space-y-1">
-            <a
-              href="service#s1"
+            <Link
+              to="service"
               className="cursor-pointer block hover:text-[#00B8F1]"
             >
               IT Support & Services
-            </a>
-            <a
-              href="service#s2"
+            </Link>
+            <Link
+              to="service"
               className="cursor-pointer block hover:text-[#00B8F1]"
             >
               IBM i Support & Services
-            </a>
-            <a
-              href="service#s3"
+            </Link>
+            <Link
+              to="service"
               className="cursor-pointer block hover:text-[#00B8F1]"
             >
               IBM i Infrastructure Modernization
-            </a>
-            <a
-              href="service#s4"
+            </Link>
+            <Link
+              to="service"
               className="cursor-pointer block hover:text-[#00B8F1]"
             >
               Strategic HR Solution
-            </a>
+            </Link>
           </div>
         </div>
         <div>
           <h4 className="font-semibold text-lg mb-3">Information</h4>
           <ul className="space-y-1">
             <li>
-              <a href="/" className="hover:underline">
+              <Link to="/" className="hover:underline">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:underline">
+              <Link to="/about" className="hover:underline">
                 About us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/service" className="hover:underline">
+              <Link to="/service" className="hover:underline">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:underline">
+              <Link to="/contact" className="hover:underline">
                 Contact us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

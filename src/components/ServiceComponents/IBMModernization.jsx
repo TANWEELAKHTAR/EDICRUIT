@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const IBMModernization = () => {
   return (
@@ -67,12 +68,11 @@ const IBMModernization = () => {
                 alt="Service Image 4"
               />
             </div>
-            <a
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors"
             >
               Get in touch
-            </a>
+            </Link>
           </div>
         </div>
       </div>

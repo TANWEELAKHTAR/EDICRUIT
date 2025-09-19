@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const ServiceHero = () => {
   const scrolldown = () => {
@@ -34,13 +35,12 @@ const ServiceHero = () => {
           >
             Know More
           </button>
-          <a
-            href="/contact"
+          <Link to="/contact"
             id="button"
             className="bg-[#00B8F1] text-white py-3 px-6 rounded-full hover:bg-[#0095c4] transition-colors duration-300 text-center"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </article>
     </div>

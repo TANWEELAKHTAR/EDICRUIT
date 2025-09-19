@@ -1,6 +1,7 @@
 import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 const HomeHero = () => {
   const scrolldown = () => {
@@ -65,9 +66,9 @@ const HomeHero = () => {
           <button id="button" onClick={scrolldown} className="border border-[#00B8F1] text-white py-3 px-6 rounded-full hover:bg-[#00B8F1] transition-colors duration-300">
             Know More
           </button>
-          <a href="/contact" id="button" className="bg-[#00B8F1] text-white py-3 px-6 rounded-full hover:bg-[#0095c4] transition-colors duration-300 text-center">
+          <Link to="/contact" id="button" className="bg-[#00B8F1] text-white py-3 px-6 rounded-full hover:bg-[#0095c4] transition-colors duration-300 text-center">
             Get Started
-          </a>
+          </Link>
         </div>
       </article>
     </div>
