@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const ContactPage = () => {
+  const [showToast, setShowToast] = useState(false);
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
     phone: "",
-    countryCode: "+91",
+    countryISO: "IN",
   });
 
   const [errors, setErrors] = useState({});
@@ -52,6 +54,7 @@ const ContactPage = () => {
     { code: "+57", country: "CO", name: "Colombia" },
     { code: "+269", country: "KM", name: "Comoros" },
     { code: "+242", country: "CG", name: "Congo" },
+    { code: "+243", country: "CD", name: "Democratic Republic of the Congo" },
     { code: "+506", country: "CR", name: "Costa Rica" },
     { code: "+385", country: "HR", name: "Croatia" },
     { code: "+53", country: "CU", name: "Cuba" },
@@ -108,7 +111,6 @@ const ContactPage = () => {
     { code: "+370", country: "LT", name: "Lithuania" },
     { code: "+352", country: "LU", name: "Luxembourg" },
     { code: "+853", country: "MO", name: "Macau" },
-    { code: "+389", country: "MK", name: "North Macedonia" },
     { code: "+261", country: "MG", name: "Madagascar" },
     { code: "+265", country: "MW", name: "Malawi" },
     { code: "+60", country: "MY", name: "Malaysia" },
@@ -133,6 +135,7 @@ const ContactPage = () => {
     { code: "+227", country: "NE", name: "Niger" },
     { code: "+234", country: "NG", name: "Nigeria" },
     { code: "+850", country: "KP", name: "North Korea" },
+    { code: "+389", country: "MK", name: "North Macedonia" },
     { code: "+47", country: "NO", name: "Norway" },
     { code: "+968", country: "OM", name: "Oman" },
     { code: "+92", country: "PK", name: "Pakistan" },
@@ -169,6 +172,7 @@ const ContactPage = () => {
     { code: "+992", country: "TJ", name: "Tajikistan" },
     { code: "+255", country: "TZ", name: "Tanzania" },
     { code: "+66", country: "TH", name: "Thailand" },
+    { code: "+670", country: "TL", name: "Timor-Leste" },
     { code: "+228", country: "TG", name: "Togo" },
     { code: "+216", country: "TN", name: "Tunisia" },
     { code: "+90", country: "TR", name: "Turkey" },
@@ -188,8 +192,8 @@ const ContactPage = () => {
   ];
 
   const selectedCountry = countryCodes.find(
-    (c) => c.code === formData.countryCode
-  );
+    (c) => c.country === formData.countryISO
+  ) || countryCodes.find(c => c.country === "IN");
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -202,8 +206,8 @@ const ContactPage = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleCountrySelect = (code) => {
-    setFormData({ ...formData, countryCode: code });
+  const handleCountrySelect = (isoCode) => {
+    setFormData({ ...formData, countryISO: isoCode });
     setIsDropdownOpen(false);
     if (errors.phone) {
       setErrors({ ...errors, phone: "" });
@@ -213,35 +217,30 @@ const ContactPage = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Name validation
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     } else if (formData.name.trim().length < 2) {
       newErrors.name = "Name must be at least 2 characters";
     }
 
-    // Email validation
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
 
-    // Phone validation
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
     } else if (!/^\d{6,15}$/.test(formData.phone.replace(/\s/g, ""))) {
       newErrors.phone = "Please enter a valid phone number (6-15 digits)";
     }
 
-    // Subject validation
     if (!formData.subject.trim()) {
       newErrors.subject = "Subject is required";
     } else if (formData.subject.trim().length < 3) {
       newErrors.subject = "Subject must be at least 3 characters";
     }
 
-    // Message validation
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     } else if (formData.message.trim().length < 10) {
@@ -254,7 +253,6 @@ const ContactPage = () => {
 
   const handleInputChange = (field, value) => {
     setFormData({ ...formData, [field]: value });
-    // Clear error when user starts typing
     if (errors[field]) {
       setErrors({ ...errors, [field]: "" });
     }
@@ -262,7 +260,7 @@ const ContactPage = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -275,7 +273,7 @@ const ContactPage = () => {
     formDataObj.append("email", formData.email);
     formDataObj.append("subject", formData.subject);
     formDataObj.append("message", formData.message);
-    formDataObj.append("phone", `${formData.countryCode} ${formData.phone}`);
+    formDataObj.append("phone", `${selectedCountry.code} ${formData.phone}`);
 
     const object = Object.fromEntries(formDataObj);
     const json = JSON.stringify(object);
@@ -298,11 +296,14 @@ const ContactPage = () => {
           subject: "",
           message: "",
           phone: "",
-          countryCode: "+91",
+          countryISO: "IN",
         });
         setErrors({});
-        alert("Message sent successfully!");
-        window.location.href = "/";
+        setShowToast(true);
+        
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 2000);
       } else {
         throw new Error("Form submission failed");
       }
@@ -316,6 +317,30 @@ const ContactPage = () => {
 
   return (
     <section className="w-full min-h-fit">
+      {showToast && (
+        <div className="fixed top-4 right-4 z-50">
+          <div className="bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            <div>
+              <p className="font-semibold">Success!</p>
+              <p className="text-sm">Message sent successfully. Redirecting...</p>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div className="w-full h-fit md:h-screen flex flex-col md:flex-row">
         <div className="w-full lg:w-1/2 h-full flex items-center justify-center flex-col gap-8 px-8 mt-28 lg:mt-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl capitalize font-semibold text-center">
@@ -381,23 +406,25 @@ const ContactPage = () => {
                 <label className="block text-sm font-medium mb-1">
                   Phone Number <span className="text-red-500">*</span>
                 </label>
-                <div className={`flex bg-white shadow-lg rounded-lg border ${
+                <div
+                  className={`flex bg-white shadow-lg rounded-lg border ${
                     errors.phone ? "border-red-500" : "border-white/10"
-                  }`}>
+                  }`}
+                >
                   <div className="relative" ref={dropdownRef}>
                     <button
                       type="button"
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="flex items-center gap-2 px-3 py-2 bg-white border-r border-gray-200 focus:outline-none cursor-pointer hover:bg-gray-50 transition-colors rounded-l-lg"
+                      className="flex items-center gap-2 px-3 py-2 bg-white border-r border-gray-200 focus:outline-none cursor-pointer hover:bg-gray-50 transition-colors rounded-l-lg h-full"
                       style={{ minWidth: "90px" }}
                     >
                       <img
-                        src={`https://flagcdn.com/w40/${selectedCountry.country.toLowerCase()}.png`}
-                        alt={selectedCountry.name}
+                        src={`https://flagcdn.com/w40/${selectedCountry?.country.toLowerCase()}.png`}
+                        alt={selectedCountry?.name}
                         className="w-6 h-4 object-cover rounded"
                       />
                       <span className="text-sm font-medium">
-                        {selectedCountry.code}
+                        {selectedCountry?.code}
                       </span>
                       <svg
                         className={`fill-current h-4 w-4 transition-transform ${
@@ -414,9 +441,9 @@ const ContactPage = () => {
                       <div className="absolute top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto">
                         {countryCodes.map((country) => (
                           <button
-                            key={country.code}
+                            key={country.country}
                             type="button"
-                            onClick={() => handleCountrySelect(country.code)}
+                            onClick={() => handleCountrySelect(country.country)}
                             className="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-100 transition-colors text-left"
                           >
                             <img
@@ -424,10 +451,10 @@ const ContactPage = () => {
                               alt={country.name}
                               className="w-6 h-4 object-cover rounded"
                             />
-                            <span className="text-sm font-medium">
+                            <span className="text-sm font-medium w-12 shrink-0">
                               {country.code}
                             </span>
-                            <span className="text-sm text-gray-600">
+                            <span className="text-sm text-gray-600 truncate">
                               {country.name}
                             </span>
                           </button>
